@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matheus McNeil</title>
     <link rel="icon" type="image/x-icon" href="assets/pixel-pc-fav.svg">
-    <!-- <link rel="stylesheet" href="css/customBootstrap.css"> -->
-    <!-- Standalone Metals CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/metals.css">
-    <link rel="stylesheet" href="css/custom.css">
 
     <style>
         #header {
@@ -452,19 +448,20 @@
                 <div class="col-12 col-md-4 py-1">
                     <div class="card h-100 shadow">
                         <div class="card-body">
-                            <h5 class="card-title">E-mail
+                            <h5 class="card-title">Email
                                 <i class="bi bi-envelope pb-1 ps-1 fs-4"></i>
                             </h5>
                             <p class="card-text">
                                 meuemail@gmail.com
                             </p>
                             <a href="mailto:matheusmcneil@gmail.com" class="btn btn-primary bg-gradient shadow"
-                                id="sendEmail">Escrever
-                                e-mail agora</a>
+                                id="sendEmail">
+                                Escrever email agora
+                            </a>
                             <button type="button" class="btn btn-secondary bg-gradient shadow" data-bs-toggle="popover"
                                 data-bs-trigger="focus" data-bs-content="E-mail copiado com sucesso!"
                                 onclick="navigator.clipboard.writeText('matheusmcneil@gmail.com')">
-                                Copiar e-mail
+                                Copiar email
                             </button>
                         </div>
                     </div>
@@ -662,11 +659,39 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+
     <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-bs-theme', theme);
+            const navbar = document.getElementById('navbar');
+            if (theme === 'dark') {
+                navbar.setAttribute('data-bs-theme', 'light');
+            } else {
+                navbar.setAttribute('data-bs-theme', 'dark');
+            }
+        }
+
+        gsap.registerPlugin(SplitText)
+
+        let split = SplitText.create(".splitText", { type: "chars" });
+
+        gsap.from(split.chars, {
+            y: 100,
+            autoAlpha: 0,
+            stagger: {
+                amount: 1,
+                from: "random"
+            }
+        });
 
     </script>
-
-
 
 </body>
 
