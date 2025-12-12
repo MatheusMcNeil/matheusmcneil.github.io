@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus McNeil</title>
+    <link rel="icon" type="image/x-icon" href="assets/pixel-pc-fav.svg">
+    <!-- <link rel="stylesheet" href="css/customBootstrap.css"> -->
+    <!-- Standalone Metals CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/metals.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" class="">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol viewBox="0 0 32 32" id="pixel-pc">
+            <path
+                d="M30.475 22.86h-4.57v-1.53h1.52v-1.52H4.575v1.52H6.1v1.53H1.525V32h28.95Zm-22.86 -1.53h16.76v1.53H7.615Zm21.34 9.15H3.045v-6.1h25.91Z"
+                fill="currentColor" stroke-width="1"></path>
+            <path d="M27.425 1.52h1.53v18.29h-1.53Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M18.285 25.9h7.62v1.53h-7.62Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M18.285 10.67h1.52v1.52h-1.52Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M18.285 7.62h1.52v1.52h-1.52Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M13.715 12.19h4.57v1.52h-4.57Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M12.185 10.67h1.53v1.52h-1.53Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M12.185 7.62h1.53v1.52h-1.53Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M6.1 18.29h19.81V3.05H6.1ZM7.615 4.57h16.76v12.19H7.615Z" fill="currentColor" stroke-width="1">
+            </path>
+            <path d="M6.095 25.9h3.05v3.05h-3.05Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M4.575 0h22.85v1.52H4.575Z" fill="currentColor" stroke-width="1"></path>
+            <path d="M3.045 1.52h1.53v18.29h-1.53Z" fill="currentColor" stroke-width="1"></path>
+        </symbol>
+    </svg>
+
+    <!-- NAVBAR -->
+    <nav class="navbar bg-body bg-gradient navbar-expand-md sticky-top" id="navbar" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <svg class="bi me-1" width="28" height="28" fill="red">
+                    <use xlink:href="#pixel-pc" />
+                </svg>
+                Matheus McNeil
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a class="nav-link" href="#services">Serviços</a>
+                    <a class="nav-link" href="#pricing">Pacotes</a>
+                    <a class="nav-link" href="#contacts">Contato</a>
+                </div>
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-sun ps-1 pb-1"></i>
+                            Temas
+                            <i class="bi bi-moon-stars-fill ps-1 pb-1"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button" class="dropdown-item" onclick="setTheme('dark')">
+                                    Tema escuro
+                                    <i class="bi bi-moon-stars-fill ps-1 pb-1"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item" onclick="setTheme('light')">
+                                    Tema claro
+                                    <i class="bi bi-sun ps-1 pb-1"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABEÇALHO -->
+    <section class="d-flex justify-content-center align-items-center text-center" id="header">
+
+        <div class="container">
+
+            <div class="splitText">
+
+                <p class="display-1 fw-bold lh-1 pb-1 p1">
+                    Chega de <span class="text-danger">perder dinheiro</span><br>
+                    por não estar na internet
+                </p>
+
+                <p class="h1 fw-semibold pb-3 p2">
+                    Nós cuidamos de toda a parte digital<br>Para que você foque no seu trabalho!
+                </p>
+
+                <p class="h3 pb-3 p3">
+                    <span class="span1">Website</span>,
+                    <span class="span2">Design</span>,
+                    <span class="span3">Marketing</span>
+                    e muito mais.
+                </p>
+
+            </div>
+
+            <a href="#pricing" class="btn btn-primary btn-lg shadow mt-2 headerButton">
+                Comece a ganhar dinheiro na internet agora!
+            </a>
+
+
+        </div>
+
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="py-3" id="services">
+
+        <div class="container" id="icon-grid">
+
+            <div class="text-center pt-2 pb-3">
+                <p class="h1">Serviços</p>
+                <hr class="border border-bronze border-2 opacity-50" />
+                <p class="">
+                    Mais serviços disponíveis em breve!
+                </p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-window me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                            Website
+                        </h3>
+
+                        <p>
+                            Seu website moderno e responsivo on-line 24/7
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-graph-up-arrow me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">SEO</h3>
+                        <p>Seu website no topo dos buscadores.</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-bar-chart me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Análise de dados</h3>
+                        <p>Monitore seu website e conheça seu público.</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-pencil me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Copywriting</h3>
+                        <p>
+                            Textos profissionais para seu website e marketing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-palette me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Design</h3>
+                        <p>
+                            Uma identidade visual única para o seu negócio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-briefcase me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Perfil business</h3>
+                        <!-- <p>Seu perfil empresarial no Google, WhatsApp e etc. -->
+                        <p>Nas redes: Google, Facebook, Instagram e Whatsapp.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-people me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Redes sociais</h3>
+                        <p>Fazemos e genenciamos seu perfil nas redes sociais.</p>
+                    </div>
+                </div>
+
+                <div class="col d-flex align-items-start iconGrid">
+                    <i class="bi bi-megaphone me-3 flex-shrink-0 lh-1 fs-2"></i>
+                    <div>
+                        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Marketing digital</h3>
+                        <p>
+                            Anuncie conosco e veja seu negócio prosperar!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PACOTES -->
+    <section class="py-3" id="pricing">
+
+        <div class="container">
+
+            <div class="text-center pt-2 pb-3">
+                <p class="h1">Pacotes</p>
+                <hr class="border border-bronze border-2 opacity-50" />
+                <p class="">
+                    Após o primeiro ano o preço cai para planos a partir de
+                    10 reais mensais. <a href="">Saiba mais.</a>
+                </p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow border-bronze">
+                        <div class="card-header py-3 bg-bronze border-bronze">
+                            <h4 class="my-0 fw-normal">Bronze</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">
+                                R$50<small class="text-body-secondary fw-light">/mês</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+
+                                <li>Website <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Copywriting <i class="bi bi-check-lg text-success"></i></li>
+                                <li><del>Redes sociais</del></li>
+                                <li><del>Perfil business</del></li>
+                                <li><del>SEO</del></li>
+                                <li><del>Análise de dados</del></li>
+                                <li><del>Design</del></li>
+                                <li><del>Marketing digital</del></li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-bronze shadow">
+                                Comprar pacote Bronze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow border-silver">
+                        <div class="card-header py-3 bg-silver border-silver">
+                            <h4 class="my-0 fw-normal">Prata</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">
+                                R$100<small class="text-body-secondary fw-light">/mês</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Website <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Copywriting <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Redes sociais <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Perfil business <i class="bi bi-check-lg text-success"></i></li>
+                                <li><del>SEO</del></li>
+                                <li><del>Análise de dados</del></li>
+                                <li><del>Design</del></li>
+                                <li><del>Marketing digital</del></li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-silver shadow">
+                                Comprar pacote Prata
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow border-gold">
+                        <div class="card-header py-3 bg-gold border-gold">
+                            <h4 class="my-0 fw-normal">Ouro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">
+                                R$200<small class="text-body-secondary fw-light">/mês</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Website <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Copywriting <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Redes sociais <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Perfil business <i class="bi bi-check-lg text-success"></i></li>
+                                <li>SEO <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Análise de dados <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Design <i class="bi bi-check-lg text-success"></i></li>
+                                <li>Marketing digital <i class="bi bi-check-lg text-success"></i></li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-gold shadow">
+                                Comprar pacote Ouro
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATOS -->
+    <section class="pb-4" id="contacts">
+
+        <div class="container">
+
+            <div class="text-center pt-3 pb-3">
+                <p class="h1">Contatos</p>
+                <hr class="border border-bronze border-2 opacity-50" />
+                <p class="">
+                    Quer fechar negócio ou tirar uma dúvida? Entre em contato, responderemos em breve.
+                </p>
+            </div>
+
+            <div class="row text-center">
+
+                <div class="col-12 col-md-4 py-1">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title col">Whatsapp
+                                <i class="bi bi-whatsapp pb-1 ps-1 fs-4"></i>
+                            </h5>
+                            <p class="card-text">
+                                000000000
+                            </p>
+                            <a href="https://wa.me/5521971481272" class="btn btn-primary bg-gradient shadow"
+                                target="_blank">
+                                Mandar zap agora
+                            </a>
+                            <button type="button" class="btn btn-secondary bg-gradient shadow" data-bs-toggle="popover"
+                                data-bs-trigger="focus" data-bs-content="Whatsapp copiado com sucesso!"
+                                onclick="navigator.clipboard.writeText('5521971481272')">
+                                Copiar número
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 py-1">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">E-mail
+                                <i class="bi bi-envelope pb-1 ps-1 fs-4"></i>
+                            </h5>
+                            <p class="card-text">
+                                meuemail@gmail.com
+                            </p>
+                            <a href="mailto:matheusmcneil@gmail.com" class="btn btn-primary bg-gradient shadow"
+                                id="sendEmail">Escrever
+                                e-mail agora</a>
+                            <button type="button" class="btn btn-secondary bg-gradient shadow" data-bs-toggle="popover"
+                                data-bs-trigger="focus" data-bs-content="E-mail copiado com sucesso!"
+                                onclick="navigator.clipboard.writeText('matheusmcneil@gmail.com')">
+                                Copiar e-mail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 py-1">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Telefone
+                                <i class="bi bi-telephone pb-1 ps-1 fs-4"></i>
+                            </h5>
+                            <p class="card-text">
+                                00000000
+                            </p>
+                            <a href="tel:5521971481272" class="btn btn-primary bg-gradient shadow">Ligar agora</a>
+                            <button type="button" class="btn btn-secondary bg-gradient shadow" data-bs-toggle="popover"
+                                data-bs-trigger="focus" data-bs-content="Telefone copiado com sucesso!"
+                                onclick="navigator.clipboard.writeText('5521971481272')">
+                                Copiar número
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVIÇOS EXPLICADOS / INFORMAÇÕES RESUMIDAS / DETALHES DOS SERVIÇOS / SAIBA MAIS -->
+    <section class="" id="services-info">
+
+        <div class="container">
+
+            <div class="text-center pt-3 pb-3">
+                <p class="h1">Mais informações</p>
+                <hr class="border border-bronze border-2 opacity-50" />
+                <p class="">
+                    Saiba um pouco mais sobre os serviços que oferecemos.
+                </p>
+            </div>
+
+            <nav>
+                <div class="nav nav-tabs justify-content-center mb-3" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-website-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-website" type="button" role="tab" aria-controls="nav-website"
+                        aria-selected="true">Website</button>
+
+                    <button class="nav-link" id="nav-design-tab" data-bs-toggle="tab" data-bs-target="#nav-design"
+                        type="button" role="tab" aria-controls="nav-design" aria-selected="false">Design</button>
+
+                    <button class="nav-link" id="nav-social-tab" data-bs-toggle="tab" data-bs-target="#nav-social"
+                        type="button" role="tab" aria-controls="nav-social" aria-selected="false">Redes
+                        sociais</button>
+
+                </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+
+                <div class="tab-pane fade show active" id="nav-website" role="tabpanel"
+                    aria-labelledby="nav-website-tab">
+                    <div class="container col-xxl-8">
+                        <div class="row flex-lg-row-reverse align-items-center">
+                            <div class="col-10 col-sm-8 col-lg-6">
+                                <img src="assets/responsivotemp.png" class="d-block mx-lg-auto img-fluid" alt="Website"
+                                    width="700" height="500" loading="lazy">
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- <p class="h1">Website</p> -->
+                                <!-- <p class="lead">Seu website moderno e responsivo on-line 24/7</p> -->
+                                <p>Responsivo: Criamos websites modernos, leves e com carregamento ultra-rápido.
+                                    Eles
+                                    são 100% responsivos, adaptando-se perfeitamente a qualquer tela do usuário seja
+                                    celular, tablet ou computador.</p>
+                                <!-- <p>Dormínio e email: seuwebsite.com.br seuemail@seuwebsite.com.br</p> -->
+                                <p>SEO: Otimização websites para mecanismos de busca. Facilitando que ele apareça
+                                    nas
+                                    primeiras posições do Google.</p>
+                                <p>Análise de dados: Integramos o website ao Google Analytics para oferecer
+                                    relatórios
+                                    claros e objetivos. Você terá transparência total, saberá quantas pessoas
+                                    acessam,
+                                    como elas interagem com o seu website...</p>
+                                <!-- <p>tipos de website: institucional, e-commerce, blog...</p> -->
+                                <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+                                        Saiba
+                                    </button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
+                    <div class="container col-xxl-8">
+                        <div class="row flex-lg-row-reverse align-items-center">
+                            <div class="col-10 col-sm-8 col-lg-6">
+                                <img src="assets/bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Design"
+                                    width="700" height="500" loading="lazy">
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- <p class="h1">Design</p> -->
+                                <!-- <p class="lead">Uma identidade visual única para o seu negócio.</p> -->
+                                <p>Identidade visual e branding: Design focado na sua marca, definindo elementos
+                                    essenciais como logotipo, tipografia, cores e estilo visual, garantindo uma
+                                    identidade única e memorável.</p>
+                                <!-- <p>branding é design para sua empresa. Ícones, cores, tipografia...</p> -->
+                                <p>Design para marketing digital: Criamos imagens e vídeos para suas campanhas.
+                                    Tudo sob medida para qualquer plataforma: Instagram (post/reels), status do
+                                    WhatsApp e etc.</p>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button type="button" class="btn btn-primary px-4 me-md-2">
+                                        Saiba todas as informações de todos os serviços
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nav-social" role="tabpanel" aria-labelledby="nav-social-tab">
+                    <div class="container col-xxl-8">
+                        <div class="row flex-lg-row-reverse align-items-center">
+                            <div class="col-10 col-sm-8 col-lg-6">
+                                <img src="assets/google-business-temp.png" class="d-block mx-lg-auto img-fluid"
+                                    alt="Redes sociais" width="700" height="500" loading="lazy">
+                            </div>
+                            <div class="col-lg-6">
+                                <!-- <p class="h1">Redes sociais</p> -->
+                                <!-- <p class="lead">Fazemos e genenciamos seu perfil nas redes sociais.</p> -->
+                                <p>Google Business Otimizado: Configuramos seu Google Meu Negócio para garantir que
+                                    informações importantes da sua empresa apareçam com destaque no Google e no
+                                    Google
+                                    Maps.</p>
+                                <p>Meta Business Suite: Cuidamos da sua presença na Meta. A empresa mãe do
+                                    Instagram,
+                                    Facebook e WhatsApp. Conta comercial no Whatsapp com selo de verificação,
+                                    página empresarial no
+                                    Facebook, Instagram e etc.
+                                </p>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+                                        Placeholder
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- div elementos tabeados -->
+
+        </div> <!-- div container -->
+
+    </section>
+
+    <!-- FOOTER -->
+    <section class="" id="footer">
+
+        <div class="container">
+
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="#" class="mb-3 me-2 mb-md-0 lh-1 text-body" aria-label="Bootstrap">
+                        <svg class="bi" width="28" height="28" fill="black">
+                            <use xlink:href="#pixel-pc" />
+                        </svg>
+                    </a>
+                    <span class="mb-3 mb-md-0">&copy; 2025 Matheus McNeil</span>
+                </div>
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3">
+                        <a href="#" aria-label="Instagram" class="text-body">
+                            <i class="bi bi-github fs-4"></i>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="Facebook" class="text-body">
+                            <i class="bi bi-linkedin fs-4"></i>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="js/themes.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+
+    <script src="js/script.js"></script> -->
+
+</body>
+
+</html>
