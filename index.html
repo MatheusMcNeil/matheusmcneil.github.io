@@ -127,7 +127,7 @@
     </svg>
 
     <!-- NAVBAR -->
-    <nav class="navbar bg-body bg-gradient navbar-expand-md sticky-top" id="navbar" data-bs-theme="dark">
+    <nav class="navbar bg-secondary bg-gradient navbar-expand-md sticky-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <svg class="bi me-1" width="28" height="28" fill="red">
@@ -668,28 +668,17 @@
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-        function setTheme(theme) {
-            document.documentElement.setAttribute('data-bs-theme', theme);
-            const navbar = document.getElementById('navbar');
-            if (theme === 'dark') {
-                navbar.setAttribute('data-bs-theme', 'light');
-            } else {
-                navbar.setAttribute('data-bs-theme', 'dark');
-            }
-        }
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-bs-theme', theme);
+}
 
-        gsap.registerPlugin(SplitText)
-
-        let split = SplitText.create(".splitText", { type: "chars" });
-
-        gsap.from(split.chars, {
-            y: 100,
-            autoAlpha: 0,
-            stagger: {
-                amount: 1,
-                from: "random"
-            }
-        });
+let tl = gsap.timeline();
+tl
+    .from(".p1", { opacity: 0, y: 100, duration: 0.5 })
+    .from(".p2", { opacity: 0, y: 100, duration: 0.5 })
+    .from(".p3", { opacity: 0, y: 100, duration: 0.5 })
+    .from(".headerButton", { opacity: 0, duration: 0.5 })
+    .from(".navbar", { opacity: 0, duration: 0.5 });
 
     </script>
 
